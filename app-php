@@ -23,9 +23,7 @@ RUN docker-php-ext-install pdo_mysql zip pcntl
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Add user for laravel application
-# The user ID that owns the files for the project (for your host) should be
-# filled in below - the default is user 1000
+# ***** REPLACE 1000 with your current user ID if it is not 1000
 
 RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
