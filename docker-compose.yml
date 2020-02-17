@@ -7,7 +7,7 @@ services:
     volumes:
     - ./api:/var/www/html
     ports:
-    - 43080:80
+    - "80"
     links:
     - php
   php:
@@ -25,11 +25,11 @@ services:
     volumes:
     - ./frontend:/var/www/html
     ports:
-    - 43081:80
+    - "80"
   mysql:
     image: mysql:8
     ports:
-    - 43006:3306
+    - "3306"
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: laravel

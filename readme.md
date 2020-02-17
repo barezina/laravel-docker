@@ -43,8 +43,8 @@ www@6bc041aea9d7:/var/www/html$ _
 
 #### Ports:
 
-* API backend can be accessed on localhost:43080
-* Static frontend can be accessed on localhost:43081
-* Mysql can be accessed on localhost:43006 (username: root / password: secret)
+After bringing up your containers, the host-exposed ports can be checked by typing `docker ps` and checking the running container list
+
+Mysql can be accessed with default credentials: (username: root / password: secret)
 
 Happy coding.

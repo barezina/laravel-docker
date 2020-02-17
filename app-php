@@ -36,6 +36,9 @@ COPY --chown=www:www . /var/www/html
 # Change current user to www
 USER www
 
+# Install prestissimo for blazing composer speed
+RUN composer global require hirak/prestissimo
+
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
