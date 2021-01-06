@@ -12,7 +12,7 @@ It brings up:
 
 #### How to use:
 * Go get yourself a ubuntu machine. The more recent, the better.
-* Run 1install-docker.sh1 if you dont have docker and docker-compose on your machine.
+* Run `install-docker.sh` if you dont have docker and docker-compose on your machine.
 * Clone this repo to a folder: `git clone https://github.com/barezina/laravel-docker.git`
 * Open a terminal and type `echo $UID`. 
 * If the output is not 1000, open app-php and place your user ID into this file.
