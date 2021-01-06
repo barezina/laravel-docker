@@ -11,9 +11,8 @@ It brings up:
 * A container for mysql.
 
 #### How to use:
-* Go get yourself a ubuntu 18.04 machine.
-* Install docker: https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/
-* Install docker-compose: https://docs.docker.com/compose/install/
+* Go get yourself a ubuntu machine. The more recent, the better.
+* Run install_docker.sh if you dont have docker and docker-compose on your machine.
 * Clone this repo to a folder: `git clone https://github.com/barezina/laravel-docker.git`
 * Open a terminal and type `echo $UID`. 
 * If the output is not 1000, open app-php and place your user ID into this file.
