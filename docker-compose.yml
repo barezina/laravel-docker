@@ -1,6 +1,8 @@
 version: "3.5"
 services:
   nginx-api:
+    container_name: api-nginx
+    env_file: .env
     build:
         dockerfile: app-nginx-api
         context: .
@@ -11,6 +13,8 @@ services:
     links:
     - php
   php:
+    container_name: api-php
+    env_file: .env
     build:
         dockerfile: app-php
         context: .
@@ -19,6 +23,8 @@ services:
     links:
     - mysql
   frontend:
+    container_name: ui-nginx
+    env_file: .env
     build:
         dockerfile: app-nginx-frontend
         context: .
@@ -27,10 +33,12 @@ services:
     ports:
     - "80"
   mysql:
+    container_name: mysql
+    env_file: .env
     image: mysql:8
     ports:
     - "3306"
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: ${db_password}
